@@ -1,0 +1,22 @@
+{
+	"name": "Stripe Example",
+	"version": "0.1",
+	"description": "Stripe Example Extension",
+	"permissions": [
+		"<all_urls>"
+	],
+	"background": {
+		"page": "background.html",
+		"persistent": false
+	},
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": ["app-code.js"],
+		"run_at": "document_end"
+	}],
+	"web_accessible_resources": [
+		"stripeFrame.html",
+	],
+	"content_security_policy": "script-src 'self' https://stripe.com/ https://js.stripe.com/ https://js.stripe.com/v3/; object-src 'self'",
+	"manifest_version": 2
+}
