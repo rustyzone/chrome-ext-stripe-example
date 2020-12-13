@@ -1,7 +1,7 @@
 //Content Script
 
 //Include iFrame...
-var htmlStr = '<iframe style="width:100%;border:none;height:40px;" src="'+chrome.extnesion.getURL('stripeFrame.html')+'"></iframe>'
+var htmlStr = '<iframe style="width:100%;border:none;height:40px;" src="'+chrome.extension.getURL('stripeFrame.html')+'"></iframe>'
 +'<button class="submit-buttom">Submit Card</button>';
 var newEle = document.createElement('div');
 newele.innerHTML = htmlStr;
